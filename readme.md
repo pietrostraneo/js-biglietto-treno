@@ -10,3 +10,27 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 BONUS
 1 - Mostrare il risultato a video in html;
 2 - Stilizzare con i css la pagina
+
+
+ESERCIZIO CONSEGNATO.
+NOTE:
+
+Avevo diviso le due condizioni in questa maniera
+
+if(eta<18){
+    finalprice = partialprice - sconto_under
+}
+else{
+    finalprice = partialprice
+}
+
+if(eta>=65){
+    finalprice = partialprice - sconto_over
+}
+else{
+    finalprice = partialprice
+}
+
+Il risultato è che funzionava soltanto lo sconto OVER, mentre se inserivo un età inferiore ai 18, il risultato era il prezzo NON scontato.
+Ho risolto aggiungendo un else if come condizione sotto il primo if.
+
