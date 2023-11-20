@@ -5,20 +5,23 @@ let eta = prompt("Quanti anni hai?")
 const price = 0.21
 
 let partialprice = price * distance;
+let sconto_under = partialprice * 0.2;
+let sconto_over = partialprice * 0.4;
 let finalprice;
 
 if(eta<18){
-    finalprice = partialprice * 0.2
+    finalprice = partialprice - sconto_under
 }
 else{
     finalprice = partialprice
 }
 
 if(eta>=65){
-    finalprice = partialprice * 0.4
+    finalprice = partialprice - sconto_over
 }
 else{
     finalprice = partialprice
 }
 
-console.log(finalprice);
+
+document.getElementById("ticketprice").innerHTML = finalprice.toFixed(2) + "€";
