@@ -12,16 +12,23 @@ let finalprice;
 if(eta<18){
     finalprice = partialprice - sconto_under
 }
+
+else if (eta>=65){
+    finalprice = partialprice - sconto_over
+}
+
 else{
     finalprice = partialprice
 }
 
-if(eta>=65){
-    finalprice = partialprice - sconto_over
-}
-else{
-    finalprice = partialprice
-}
+// if(eta>=65){
+//     finalprice = partialprice - sconto_over
+// }
+// else{
+//     finalprice = partialprice
+// }
+
+// SEPARANDO LE DUE CONDIZIONI COME POTETE VEDERE NEI PUSH PRECEDENTI, LO SCONTO SU UNDER 18 NON FUNZIONAVA, MENTRE QUELLO PER GLI OVER 65 SI
 
 
 document.getElementById("ticketprice").innerHTML = finalprice.toFixed(2) + "€";
